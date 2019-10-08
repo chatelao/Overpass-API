@@ -4,10 +4,11 @@ before_script:
 - sudo apt-get install -y libtool autoconf automake
 - cd src
 - mkdir -p m4
-- autoreconf
-- libtoolize
 - automake --add-missing
 - autoreconf
+- libtoolize
+# - automake --add-missing
+# - autoreconf
 
 - cd ../build
 - ../src/configure CXXFLAGS="-Wall -O2" --prefix=$EXEC_DIR
