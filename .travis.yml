@@ -2,4 +2,11 @@ language: generic
 
 before_script:
 - cd src
-- make
+- autoreconf
+- libtoolize
+- automake --add-missing
+- autoreconf
+
+- cd ../build
+- ../src/configure CXXFLAGS="-Wall -O2" --prefix=$EXEC_DIR
+- make install
