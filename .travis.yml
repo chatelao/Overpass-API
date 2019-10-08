@@ -3,6 +3,7 @@ language: c
 before_script:
 - sudo apt-get install -y libtool autoconf automake
 - cd src
+- mkdir -p m4
 - autoreconf
 - libtoolize
 - automake --add-missing
