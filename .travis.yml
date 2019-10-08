@@ -11,4 +11,4 @@ before_script:
 
 - cd ../build
 - ../src/configure CXXFLAGS="-Wall -O2" --prefix=$EXEC_DIR
-- make install
+- sudo make install
