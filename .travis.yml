@@ -1,6 +1,7 @@
-language: generic
+language: c
 
 before_script:
+- sudo apt-get install -y libtool autoconf automake
 - cd src
 - autoreconf
 - libtoolize
